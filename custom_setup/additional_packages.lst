@@ -1,4 +1,9 @@
+# HTTPS support:
 uhttpd-mod-tls
 luci-ssl
+
+# Regularly needed packages:
+# (system load)
 htop
+# (network traffic debugging)
 tcpdump

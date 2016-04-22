@@ -8,7 +8,7 @@ HOST=10.1.0.1
 ROUTER=$USER@$HOST
 #ROUTER=yak
 
-REQUIREMENTS=$(cat custom_setup/additional_packages.lst)
+REQUIREMENTS=$(cat custom_setup/additional_packages.lst | grep -v '^#')
 
 # ---- End config section
 
