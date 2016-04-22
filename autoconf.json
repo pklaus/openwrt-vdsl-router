@@ -1,0 +1,155 @@
+{
+    "general": {
+        "hostname": "shark",
+        "timezone": "Europe/Berlin",
+        "ula_prefix": "fda0:1a7c:fa2f::/48"
+    },
+    "interfaces": [
+        {
+            "name": "lo",
+            "network": "loopback",
+            "type": "loopback",
+            "addresses": [
+                {
+                    "address": "127.0.0.1",
+                    "mask": 8,
+                    "proto": "static",
+                    "family": "ipv4"
+                }
+            ]
+        },
+        {
+            "name": "lan",
+            "type": "bridge",
+            "force_link": "1",
+            "bridge_members": [
+                "eth0.1"
+            ],
+            "addresses": [
+                {
+                    "proto": "static",
+                    "address": "10.1.0.1",
+                    "mask": 16,
+                    "family": "ipv4"
+                }
+             ],
+             "ip6assign": 60
+        },
+        {
+            "network": "wan",
+            "name": "eth0.7",
+            "type": "other",
+            "proto": "pppoe",
+	    "username": "0029225145825510025554560001@t-online.de",
+	    "password": "49008058",
+	    "mtu": 1492,
+	    "ipv6": true,
+	    "keepalive": 3
+        },
+        {
+            "network": "wan6",
+            "name": "@wan",
+            "type": "other",
+            "proto": "dhcpv6",
+	    "reqaddress": "try",
+	    "reqprefix": "auto"
+        },
+        {
+            "name": "wlan0",
+            "type": "wireless",
+            "network": "lan",
+            "wireless": {
+                "radio": "radio0",
+                "mode": "access_point",
+                "ssid": "Shark",
+                "encryption": {
+                    "protocol": "wpa2_personal",
+                    "key": "fWUb30uzee"
+                }
+            }
+        },
+        {
+            "name": "wlan1",
+            "type": "wireless",
+            "network": "lan",
+            "wireless": {
+                "radio": "radio1",
+                "mode": "access_point",
+                "ssid": "Shark",
+                "encryption": {
+                    "protocol": "wpa2_personal",
+                    "key": "fWUb30uzee"
+                }
+            }
+        }
+    ],
+    "radios": [
+        {
+            "name": "radio0",
+            "driver": "mac80211",
+            "path": "ffe09000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0",
+            "protocol": "802.11n",
+            "hwmode": "11a",
+            "channel": 0,
+            "channel_width": 40,
+            "tx_power": 22,
+            "distance": 25,
+            "country": "DE"
+        },
+        {
+            "name": "radio1",
+            "driver": "mac80211",
+            "path": "ffe0a000.pcie/pci0001:02/0001:02:00.0/0001:03:00.0",
+            "protocol": "802.11n",
+            "hwmode": "11g",
+            "channel": 0,
+            "channel_width": 40,
+            "tx_power": 20,
+            "distance": 25,
+            "country": "DE"
+        }
+   ],
+    "switch": [
+        {
+            "name": "switch0",
+            "reset": true,
+            "enable_vlan": true,
+            "mirror_monitor_port": "0",
+            "mirror_source_port": "0",
+            "vlan": [
+                {
+                    "device": "switch0",
+                    "vlan": 1,
+                    "ports": "0t 2 3 4 5",
+                    "vid": "1"
+                },
+                {
+                    "device": "switch0",
+                    "vlan": 2,
+                    "ports": "0t 1t",
+                    "vid": "7"
+                }
+            ]
+        }
+    ],
+    "dns_servers": ["8.8.8.8", "8.8.4.4"],
+    "dns_search": ["d.klaus.net"],
+    "ntp": {
+        "enabled": true,
+        "enable_server": true,
+        "server": [
+            "0.openwrt.pool.ntp.org",
+            "1.openwrt.pool.ntp.org",
+            "2.openwrt.pool.ntp.org",
+            "3.openwrt.pool.ntp.org"
+        ]
+    },
+    "dropbear": [
+        {
+            "config_name": "dropbear",
+            "PasswordAuth": "on",
+            "RootPasswordAuth": "on",
+            "Port": 22
+        }
+    ]
+}
