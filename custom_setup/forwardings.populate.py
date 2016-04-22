@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+"""
+For IPv6 check:
+https://wiki.openwrt.org/doc/uci/firewall#port_accept_for_ipv6
+"""
+
 template = """
 config redirect
 	option name '{name}'
