@@ -14,7 +14,8 @@ echo "Copying the manual OpenWrt configuration files"
 cp manual_config/* ./etc/config/
 
 echo "Populating snippets that need it"
-./custom_setup/populate_hosts.py > ./custom_setup/hosts.snip
+./custom_setup/hosts.populate.py       > ./custom_setup/hosts.snip
+./custom_setup/forwardings.populate.py > ./custom_setup/forwardings.snip
 
 echo "Appending the custom snippets to the respective config files"
 cat custom_setup/forwardings.snip >> ./etc/config/firewall

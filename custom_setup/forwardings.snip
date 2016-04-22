@@ -1,12 +1,99 @@
 
 config redirect
-	option target 'DNAT'
+	option name 'SSH to UDOO'
 	option src 'wan'
 	option dest 'lan'
 	option proto 'tcp'
 	option src_dport '17847'
-	option dest_ip '10.1.3.12'
+	option dest_ip '10.1.0.47'
 	option dest_port '22'
-	option name 'SSH to UDOO'
+	option target 'DNAT'
 
+
+config redirect
+	option name 'Locus-Live-Tracking to UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '16748'
+	option dest_ip '10.1.0.47'
+	option dest_port '16748'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'ZNC to UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '11069'
+	option dest_ip '10.1.0.47'
+	option dest_port '11069'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'HTTP-Reflector to UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '46385'
+	option dest_ip '10.1.0.47'
+	option dest_port '10101'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'IPLogger to UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '52321'
+	option dest_ip '10.1.0.47'
+	option dest_port '52321'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'URL Shortener to UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '80'
+	option dest_ip '10.1.0.47'
+	option dest_port '8080'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SSH to owl (via SMTP port 587)'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '587'
+	option dest_ip '10.1.1.1'
+	option dest_port '22 '
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SSH to owl'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '17832'
+	option dest_ip '10.1.1.1'
+	option dest_port '22'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'FHEM to UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '27166-27168'
+	option dest_ip '10.1.0.47'
+	option dest_port '8083-8085'
+	option target 'DNAT'
 
