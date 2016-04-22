@@ -32,3 +32,15 @@ config odhcpd 'odhcpd'
 	option leasefile '/tmp/hosts/odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
 
+
+config host
+	option name 'surveillancepi'
+	option mac '00:30:f1:ed:f9:43'
+	option ip '10.1.3.12'
+	option hostid '::13:12'
+
+config domain
+	option name 'cluster-router'
+	option ip '10.1.1.242'
+
+

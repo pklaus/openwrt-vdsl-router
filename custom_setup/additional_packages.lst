@@ -1,2 +1,4 @@
 uhttpd-mod-tls
 luci-ssl
+htop
+tcpdump
