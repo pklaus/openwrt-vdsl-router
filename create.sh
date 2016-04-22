@@ -13,6 +13,9 @@ netjsonconfig --config $NETJSON_CONFIG --backend openwrt --method generate > tmp
 echo "Copying the manual OpenWrt configuration files"
 cp manual_config/* ./etc/config/
 
+echo "Populating snippets that need it"
+./custom_setup/populate_hosts.py > ./custom_setup/hosts.snip
+
 echo "Appending the custom snippets to the respective config files"
 cat custom_setup/forwardings.snip >> ./etc/config/firewall
 cat custom_setup/hosts.snip       >> ./etc/config/dhcp
