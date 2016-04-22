@@ -1,32 +1,36 @@
-config wifi-device  radio0
-	option type     mac80211
-	option channel  36
-	option hwmode	11a
-	option path	'ffe09000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0'
-	option htmode	HT20
-	# REMOVE THIS LINE TO ENABLE WIFI:
-	option disabled 1
+config wifi-device 'radio0'
+	option channel 'auto'
+	option country 'DE'
+	option distance '22'
+	option htmode 'HT40'
+	option hwmode '11a'
+	option path 'ffe09000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0'
+	option txpower '22'
+	option type 'mac80211'
+
+config wifi-device 'radio1'
+	option channel 'auto'
+	option country 'DE'
+	option distance '22'
+	option htmode 'HT40'
+	option hwmode '11g'
+	option path 'ffe0a000.pcie/pci0001:02/0001:02:00.0/0001:03:00.0'
+	option txpower '20'
+	option type 'mac80211'
 
 config wifi-iface
-	option device   radio0
-	option network  lan
-	option mode     ap
-	option ssid     OpenWrt
-	option encryption none
-
-config wifi-device  radio1
-	option type     mac80211
-	option channel  11
-	option hwmode	11g
-	option path	'ffe0a000.pcie/pci0001:02/0001:02:00.0/0001:03:00.0'
-	option htmode	HT20
-	# REMOVE THIS LINE TO ENABLE WIFI:
-	option disabled 1
+	option device 'radio0'
+	option encryption 'psk2'
+	option key 'fWUb30uzee'
+	option mode 'ap'
+	option network 'lan'
+	option ssid 'Shark'
 
 config wifi-iface
-	option device   radio1
-	option network  lan
-	option mode     ap
-	option ssid     OpenWrt
-	option encryption none
+	option device 'radio1'
+	option encryption 'psk2'
+	option key 'fWUb30uzee'
+	option mode 'ap'
+	option network 'lan'
+	option ssid 'Shark'
 
