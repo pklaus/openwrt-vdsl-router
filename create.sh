@@ -8,7 +8,7 @@ echo "Testing the netjson configuration file $NETJSON_CONFIG"
 ./test_config.py $NETJSON_CONFIG | less
 echo "Creating the OpenWrt config from the netjson configuration file $NETJSON_CONFIG"
 netjsonconfig --config $NETJSON_CONFIG --backend openwrt --method generate > tmp.tar.gz   &&   tar -xf tmp.tar.gz  &&  rm tmp.tar.gz
-#./afterburner.py ./etc/config/
+./afterburner.py ./etc/config/
 
 echo "Copying the manual OpenWrt configuration files"
 cp manual_config/* ./etc/config/

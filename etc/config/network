@@ -33,13 +33,9 @@ config interface 'wan6'
 	option reqaddress 'try'
 	option reqprefix 'auto'
 
-config interface 'lan'
-	option ifname 'wlan0'
-	option proto 'none'
 
-config interface 'lan'
-	option ifname 'wlan1'
-	option proto 'none'
+
+
 
 config switch
 	option enable_vlan '1'
