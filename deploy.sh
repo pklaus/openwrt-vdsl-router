@@ -2,20 +2,21 @@
 
 # ---- Start config section
 
-USER=root
 HOST=10.1.0.1
-
-ROUTER=$USER@$HOST
-#ROUTER=yak
-
-REQUIREMENTS=$(cat custom_setup/additional_packages.lst | grep -v '^#')
+#HOST="2003:1234:5678:9abc::1"
+#HOST=yak
+PACKAGE_FILE=custom_setup/additional_packages.lst
 
 # ---- End config section
 
+REQUIREMENTS=$(cat $PACKAGE_FILE | grep -v '^#')
+
+ssh root@$HOST "opkg update"
 for req in $REQUIREMENTS; do
     echo "Requirement: $req"
+    ssh root@$HOST "opkg install $req"
 done
 
-#scp ./etc/config/* $ROUTER:/etc/config/
-#ssh $ROUTER 'reboot'
+scp ./etc/config/* "root@[$HOST]:/etc/config/"
+ssh root@$HOST 'reboot'
 
