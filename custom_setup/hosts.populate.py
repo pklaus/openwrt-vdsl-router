@@ -22,7 +22,7 @@ ac:18:26:75:8e:5f	10.1.0.54	xp810
 00:80:92:d6:3b:a7	10.1.0.55	ql710w
 7c:2f:80:0f:87:f7	10.1.0.61	dl500a
 7c:2f:80:02:96:44	10.1.0.62	dx600a
-18:1a:67:11:02:22	10.1.0.222	shark
+#18:1a:67:11:02:22	10.1.0.222	shark
 9c:c7:a6:be:cf:29	10.1.0.223	fb7490
 00:1c:4a:1c:ff:73	10.1.0.224	fb7270
 4c:e6:76:4f:61:b2	10.1.0.225	cluster-router
@@ -44,6 +44,7 @@ e8:94:f6:48:cc:f2	10.1.4.11	inet-probe-01
 data = data.strip()
 
 for line in data.split('\n'):
+    if line.startswith('#'): continue
     mac, ip, name = line.split('\t')
     ip_parts = ip.split('.')
     ipv6_host_suffix = '::' + ip_parts[1] + ip_parts[2] + ':' + ip_parts[3]
