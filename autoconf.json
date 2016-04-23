@@ -2,6 +2,7 @@
     "general": {
         "hostname": "shark",
         "timezone": "Europe/Berlin",
+        "zonename": "Europe/Berlin",
         "ula_prefix": "fda0:1a7c:fa2f::/48"
     },
     "interfaces": [
