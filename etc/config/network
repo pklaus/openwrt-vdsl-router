@@ -59,7 +59,7 @@ config switch_vlan
 config route
 	option interface 'lan'
 	option target '192.168.252.0/24'
-	option gateway '10.1.1.242'
+	option gateway '10.1.0.225'
 
 config route
 	option interface 'lan'
