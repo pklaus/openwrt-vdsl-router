@@ -7,3 +7,6 @@ luci-ssl
 htop
 # (network traffic debugging)
 tcpdump
+
+# iproute2 tools:
+ip
