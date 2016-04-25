@@ -15,7 +15,6 @@ config interface 'lan'
 	option ifname 'eth0.1'
 	option ip6assign '60'
 	option ipaddr '10.1.0.1/16'
-	option mtu '9000'
 	option proto 'static'
 	option type 'bridge'
 

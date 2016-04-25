@@ -26,7 +26,6 @@
             "bridge_members": [
                 "eth0.1"
             ],
-            "mtu": 9000,
             "addresses": [
                 {
                     "proto": "static",
