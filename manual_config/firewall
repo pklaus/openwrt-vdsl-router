@@ -17,6 +17,7 @@ config zone
 	option name		wan
 	list   network		'wan'
 	list   network		'wan6'
+	list   network		'modem_access'
 	option input		REJECT
 	option output		ACCEPT
 	option forward		REJECT

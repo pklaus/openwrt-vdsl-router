@@ -56,6 +56,19 @@
 	    "reqprefix": "auto"
         },
         {
+            "network": "modem_access",
+            "name": "eth0.107",
+            "type": "ethernet",
+            "addresses": [
+                {
+                    "proto": "static",
+                    "address": "192.168.107.2",
+                    "mask": 24,
+                    "family": "ipv4"
+                }
+             ]
+        },
+        {
             "name": "wlan0",
             "type": "wireless",
             "network": "lan",
@@ -129,6 +142,12 @@
                     "vlan": 2,
                     "ports": "0t 1t",
                     "vid": "7"
+                },
+                {
+                    "device": "switch0",
+                    "vlan": 3,
+                    "ports": "0t 1",
+                    "vid": "107"
                 }
             ]
         }
