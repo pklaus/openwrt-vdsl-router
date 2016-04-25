@@ -52,6 +52,7 @@
             "name": "@wan",
             "type": "other",
             "proto": "dhcpv6",
+            "mtu": 1480,
             "reqaddress": "try",
             "reqprefix": "auto"
         },
