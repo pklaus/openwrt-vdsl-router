@@ -41,19 +41,19 @@
             "name": "eth0.7",
             "type": "other",
             "proto": "pppoe",
-	    "username": "0029225145825510025554560001@t-online.de",
-	    "password": "49008058",
-	    "mtu": 1492,
-	    "ipv6": true,
-	    "keepalive": 3
+            "username": "0029225145825510025554560001@t-online.de",
+            "password": "49008058",
+            "mtu": 1492,
+            "ipv6": true,
+            "keepalive": 3
         },
         {
             "network": "wan6",
             "name": "@wan",
             "type": "other",
             "proto": "dhcpv6",
-	    "reqaddress": "try",
-	    "reqprefix": "auto"
+            "reqaddress": "try",
+            "reqprefix": "auto"
         },
         {
             "network": "modem_access",
