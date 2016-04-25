@@ -235,8 +235,8 @@ config host
 	option ip '10.1.4.12'
 	option hostid '::14:12'
 
-config domain
-	option name 'cluster-router'
-	option ip '10.1.1.242'
+#config domain
+#	option name 'cluster-router'
+#	option ip '10.1.1.242'
 
 
