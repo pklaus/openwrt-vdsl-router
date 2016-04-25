@@ -9,7 +9,7 @@ config host
 """
 
 data = """
-f8:b1:56:b3:2a:79	10.1.0.18	esxi
+34:17:eb:c4:5d:73	10.1.0.18	esxi
 b0:48:7a:b3:31:93	10.1.0.34	schaltbox
 f8:1a:67:4c:f8:6a	10.1.0.35	waltbox
 2c:30:33:9c:46:19	10.1.0.36	kalkbox
@@ -30,7 +30,7 @@ f8:d1:11:a0:05:44	10.1.0.226	fusebox-router
 98:90:96:ae:48:63	10.1.1.1	owl
 68:05:ca:2f:4e:8d	10.1.1.2	owl
 e0:f8:47:41:d6:c2	10.1.1.3	elk
-34:17:eb:c4:5d:73	10.1.1.5	gnu
+f8:b1:56:b3:2a:79	10.1.1.5	gnu
 28:37:37:47:7d:6e	10.1.1.21	airport-express
 40:0e:85:83:5f:a4	10.1.2.1	s4active-philipp
 cc:78:5f:e9:52:ea	10.1.2.21	ipad-philipp
