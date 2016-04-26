@@ -88,6 +88,17 @@ config redirect
 
 
 config redirect
+	option name 'SSH to Shark'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '22101'
+	option dest_ip '10.1.0.1'
+	option dest_port '22'
+	option target 'DNAT'
+
+
+config redirect
 	option name 'FHEM to UDOO'
 	option src 'wan'
 	option dest 'lan'
