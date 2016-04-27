@@ -251,13 +251,13 @@ config redirect
 
 
 config redirect
-	option name 'URL Shortener to UDOO'
+	option name 'UDOO nginx (Blog, URL Shortener)'
 	option src 'wan'
 	option dest 'lan'
 	option proto 'tcp'
 	option src_dport '80'
 	option dest_ip '10.1.0.47'
-	option dest_port '8080'
+	option dest_port '80'
 	option target 'DNAT'
 
 
