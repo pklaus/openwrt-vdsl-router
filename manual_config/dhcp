@@ -20,7 +20,7 @@ config dhcp 'lan'
 	option ra 'server'
 	option start '256'
 	option limit '2560'
-	option leasetime '10m'
+	option leasetime '8h'
 	option ra_management '1'
 
 config dhcp 'wan'
