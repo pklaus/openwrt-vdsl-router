@@ -17,6 +17,9 @@ for req in $REQUIREMENTS; do
     ssh root@$HOST "opkg install $req"
 done
 
+echo "Deploying the config files"
 scp ./etc/config/* "root@[$HOST]:/etc/config/"
+
+echo "Rebooting the router"
 ssh root@$HOST 'reboot'
 
