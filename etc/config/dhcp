@@ -90,7 +90,7 @@ config host
 
 
 config host
-	option name 'odroidc2'
+	option name 'k8'
 	option mac '00:1e:06:33:2d:1a'
 	option ip '10.1.0.48'
 	option hostid '::10:48'
@@ -160,24 +160,31 @@ config host
 
 
 config host
-	option name 'owl'
+	option name 'owl-onboard'
 	option mac '98:90:96:ae:48:63'
 	option ip '10.1.1.1'
 	option hostid '::11:1'
 
 
 config host
-	option name 'owl'
+	option name 'owl-addon'
 	option mac '68:05:ca:2f:4e:8d'
 	option ip '10.1.1.2'
 	option hostid '::11:2'
 
 
 config host
-	option name 'elk'
+	option name 'elk-wifi'
 	option mac 'e0:f8:47:41:d6:c2'
 	option ip '10.1.1.3'
 	option hostid '::11:3'
+
+
+config host
+	option name 'dm-wifi'
+	option mac 'e0:f8:47:30:be:ca'
+	option ip '10.1.1.7'
+	option hostid '::11:7'
 
 
 config host
@@ -242,8 +249,29 @@ config host
 	option ip '10.1.4.12'
 	option hostid '::14:12'
 
+# Custom DNS entries to be served by dnsmasq:
+# domain, srvhost, cname, mxhost, boot
+# cf. https://wiki.openwrt.org/doc/uci/dhcp#custom_domain
+#
+# domain:  A (forward) and PTR (reverse)
+# srvhost: SRV for SIP over UDP
+# cname:   CNAME alias
+# mxhost:  MX entries for email
+# boot:    TFTP Boot entry
+
+
 #config domain
 #	option name 'cluster-router'
 #	option ip '10.1.1.242'
 
+config 'cname'
+	option cname 'owl'
+	option target 'owl-onboard'
 
+config 'cname'
+	option cname 'elk'
+	option target 'elk-wifi'
+
+config 'cname'
+	option cname 'dm'
+	option target 'dm-wifi'
