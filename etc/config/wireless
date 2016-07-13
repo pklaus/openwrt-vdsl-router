@@ -18,7 +18,7 @@ config wifi-device 'radio1'
 	option txpower '20'
 	option type 'mac80211'
 
-config wifi-iface
+config wifi-iface 'wifi_wlan0'
 	option device 'radio0'
 	option encryption 'psk2'
 	option ifname 'wlan0'
@@ -27,7 +27,7 @@ config wifi-iface
 	option network 'lan'
 	option ssid 'Shark'
 
-config wifi-iface
+config wifi-iface 'wifi_wlan1'
 	option device 'radio1'
 	option encryption 'psk2'
 	option ifname 'wlan1'

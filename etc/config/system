@@ -1,4 +1,4 @@
-config system
+config system 'system'
 	option conloglevel '5'
 	option cronloglevel '8'
 	option hostname 'shark'
