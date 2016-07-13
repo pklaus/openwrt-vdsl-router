@@ -30,6 +30,7 @@ TCP	587	10.1.1.1:22 	SSH to owl (via SMTP port 587)
 TCP	17832	10.1.1.1:22	SSH to owl
 TCP	22101	10.1.0.1:22	SSH to Shark
 TCP	27166-27168	10.1.0.47:8083-8085	FHEM to UDOO
+UDP	5060	10.1.0.223:5060	SIP to fb7490
 """
 
 data = data.strip()

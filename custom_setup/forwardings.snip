@@ -130,3 +130,14 @@ config redirect
 	option dest_port '8083-8085'
 	option target 'DNAT'
 
+
+config redirect
+	option name 'SIP to fb7490'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'udp'
+	option src_dport '5060'
+	option dest_ip '10.1.0.223'
+	option dest_port '5060'
+	option target 'DNAT'
+
