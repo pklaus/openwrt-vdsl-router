@@ -1,5 +1,8 @@
 config system
+	option conloglevel '5'
+	option cronloglevel '8'
 	option hostname 'shark'
+	option log_ip '10.1.0.42'
 	option timezone 'CET-1CEST,M3.5.0,M10.5.0/3'
 	option zonename 'Europe/Berlin'
 

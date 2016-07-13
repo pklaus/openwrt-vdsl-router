@@ -3,7 +3,10 @@
         "hostname": "shark",
         "timezone": "Europe/Berlin",
         "zonename": "Europe/Berlin",
-        "ula_prefix": "fda0:1a7c:fa2f::/48"
+        "ula_prefix": "fda0:1a7c:fa2f::/48",
+        "log_ip": "10.1.0.42",
+        "conloglevel": "5",
+        "cronloglevel": "8"
     },
     "interfaces": [
         {
