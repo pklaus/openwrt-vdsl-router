@@ -22,6 +22,7 @@ config dhcp 'lan'
 	option limit '2560'
 	option leasetime '8h'
 	option ra_management '1'
+	option ra_maxinterval '30'
 
 config dhcp 'wan'
 	option interface 'wan'
