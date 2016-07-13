@@ -11,6 +11,17 @@ config redirect
 
 
 config redirect
+	option name 'SSH to GOFLEX'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '17842'
+	option dest_ip '10.1.0.42'
+	option dest_port '22'
+	option target 'DNAT'
+
+
+config redirect
 	option name 'Locus-Live-Tracking to UDOO'
 	option src 'wan'
 	option dest 'lan'
@@ -29,6 +40,17 @@ config redirect
 	option src_dport '11069'
 	option dest_ip '10.1.0.47'
 	option dest_port '11069'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SMTP to UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '25'
+	option dest_ip '10.1.0.47'
+	option dest_port '25'
 	option target 'DNAT'
 
 
