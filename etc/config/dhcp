@@ -70,6 +70,13 @@ config host
 
 
 config host
+	option name 'airport-express'
+	option mac '28:37:37:47:7d:6e'
+	option ip '10.1.0.38'
+	option hostid '::10:38'
+
+
+config host
 	option name 'goflex'
 	option mac '00:10:75:29:96:c8'
 	option ip '10.1.0.42'
@@ -169,7 +176,7 @@ config host
 
 config host
 	option name 'owl-addon'
-	option mac '68:05:ca:2f:4e:8d'
+	option mac '00:1b:21:38:45:88'
 	option ip '10.1.1.2'
 	option hostid '::11:2'
 
@@ -182,13 +189,6 @@ config host
 
 
 config host
-	option name 'dm-wifi'
-	option mac 'e0:f8:47:30:be:ca'
-	option ip '10.1.1.7'
-	option hostid '::11:7'
-
-
-config host
 	option name 'gnu'
 	option mac 'f8:b1:56:b3:2a:79'
 	option ip '10.1.1.5'
@@ -196,10 +196,10 @@ config host
 
 
 config host
-	option name 'airport-express'
-	option mac '28:37:37:47:7d:6e'
-	option ip '10.1.1.21'
-	option hostid '::11:21'
+	option name 'dm-wifi'
+	option mac 'e0:f8:47:30:be:ca'
+	option ip '10.1.1.7'
+	option hostid '::11:7'
 
 
 config host
@@ -207,6 +207,13 @@ config host
 	option mac '40:0e:85:83:5f:a4'
 	option ip '10.1.2.1'
 	option hostid '::12:1'
+
+
+config host
+	option name 's4active-doro'
+	option mac '40:0e:85:2a:6d:11'
+	option ip '10.1.2.2'
+	option hostid '::12:2'
 
 
 config host
@@ -224,6 +231,20 @@ config host
 
 
 config host
+	option name 'kindle-doro'
+	option mac '0c:47:c9:26:b0:64'
+	option ip '10.1.2.31'
+	option hostid '::12:31'
+
+
+config host
+	option name 'sony-prst1-philipp'
+	option mac '00:90:a2:3a:af:ec'
+	option ip '10.1.2.32'
+	option hostid '::12:32'
+
+
+config host
 	option name 'ut61epi'
 	option mac 'b8:27:eb:94:4a:06'
 	option ip '10.1.3.11'
@@ -238,17 +259,10 @@ config host
 
 
 config host
-	option name 'inet-probe-01'
-	option mac 'e8:94:f6:48:cc:f2'
-	option ip '10.1.4.11'
-	option hostid '::14:11'
-
-
-config host
-	option name 'inet-probe-02'
-	option mac '64:66:b3:ce:15:9a'
-	option ip '10.1.4.12'
-	option hostid '::14:12'
+	option name 'spypi'
+	option mac 'b8:27:eb:f5:c3:f9'
+	option ip '10.1.3.13'
+	option hostid '::13:13'
 
 # Custom DNS entries to be served by dnsmasq:
 # domain, srvhost, cname, mxhost, boot
@@ -262,8 +276,12 @@ config host
 
 
 #config domain
-#	option name 'cluster-router'
-#	option ip '10.1.1.242'
+#	option name 'some-host'
+#	option ip '10.20.30.40'
+
+config 'cname'
+	option cname 'owl'
+	option target 'owl.lan'
 
 config 'cname'
 	option cname 'owl.lan'

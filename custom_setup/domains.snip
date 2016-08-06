@@ -10,8 +10,12 @@
 
 
 #config domain
-#	option name 'cluster-router'
-#	option ip '10.1.1.242'
+#	option name 'some-host'
+#	option ip '10.20.30.40'
+
+config 'cname'
+	option cname 'owl'
+	option target 'owl.lan'
 
 config 'cname'
 	option cname 'owl.lan'
