@@ -19,6 +19,7 @@ config redirect
 
 data = """
 TCP	80	10.1.0.47:80	HTTP  -> UDOO nginx (Blog, URL Shortener)
+TCP	443	10.1.0.47:443	HTTPS -> UDOO nginx (Gogs)
 TCP	17847	10.1.0.47:22	SSH   -> UDOO
 TCP	16748	10.1.0.47:16748	Locus -> UDOO (Locus-Live-Tracking)
 TCP	11069	10.1.0.47:11069	ZNC   -> UDOO

@@ -207,6 +207,17 @@ config redirect
 
 
 config redirect
+	option name 'HTTPS -> UDOO nginx (Gogs)'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '443'
+	option dest_ip '10.1.0.47'
+	option dest_port '443'
+	option target 'DNAT'
+
+
+config redirect
 	option name 'SSH   -> UDOO'
 	option src 'wan'
 	option dest 'lan'
