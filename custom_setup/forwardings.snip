@@ -1,83 +1,6 @@
 
 config redirect
-	option name 'SSH to UDOO'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '17847'
-	option dest_ip '10.1.0.47'
-	option dest_port '22'
-	option target 'DNAT'
-
-
-config redirect
-	option name 'SSH to GOFLEX'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '17842'
-	option dest_ip '10.1.0.42'
-	option dest_port '22'
-	option target 'DNAT'
-
-
-config redirect
-	option name 'Locus-Live-Tracking to UDOO'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '16748'
-	option dest_ip '10.1.0.47'
-	option dest_port '16748'
-	option target 'DNAT'
-
-
-config redirect
-	option name 'ZNC to UDOO'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '11069'
-	option dest_ip '10.1.0.47'
-	option dest_port '11069'
-	option target 'DNAT'
-
-
-config redirect
-	option name 'SMTP to UDOO'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '25'
-	option dest_ip '10.1.0.47'
-	option dest_port '25'
-	option target 'DNAT'
-
-
-config redirect
-	option name 'HTTP-Reflector to UDOO'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '46385'
-	option dest_ip '10.1.0.47'
-	option dest_port '10101'
-	option target 'DNAT'
-
-
-config redirect
-	option name 'IPLogger to UDOO'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '52321'
-	option dest_ip '10.1.0.47'
-	option dest_port '52321'
-	option target 'DNAT'
-
-
-config redirect
-	option name 'UDOO nginx (Blog, URL Shortener)'
+	option name 'HTTP  -> UDOO nginx (Blog, URL Shortener)'
 	option src 'wan'
 	option dest 'lan'
 	option proto 'tcp'
@@ -88,40 +11,73 @@ config redirect
 
 
 config redirect
-	option name 'SSH to owl (via SMTP port 587)'
+	option name 'SSH   -> UDOO'
 	option src 'wan'
 	option dest 'lan'
 	option proto 'tcp'
-	option src_dport '587'
-	option dest_ip '10.1.1.1'
-	option dest_port '22 '
-	option target 'DNAT'
-
-
-config redirect
-	option name 'SSH to owl'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '17832'
-	option dest_ip '10.1.1.1'
+	option src_dport '17847'
+	option dest_ip '10.1.0.47'
 	option dest_port '22'
 	option target 'DNAT'
 
 
 config redirect
-	option name 'SSH to Shark'
+	option name 'Locus -> UDOO (Locus-Live-Tracking)'
 	option src 'wan'
 	option dest 'lan'
 	option proto 'tcp'
-	option src_dport '22101'
-	option dest_ip '10.1.0.1'
-	option dest_port '22'
+	option src_dport '16748'
+	option dest_ip '10.1.0.47'
+	option dest_port '16748'
 	option target 'DNAT'
 
 
 config redirect
-	option name 'FHEM to UDOO'
+	option name 'ZNC   -> UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '11069'
+	option dest_ip '10.1.0.47'
+	option dest_port '11069'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SMTP  -> UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '25'
+	option dest_ip '10.1.0.47'
+	option dest_port '25'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'HTTP-Reflector -> UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '46385'
+	option dest_ip '10.1.0.47'
+	option dest_port '10101'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'IPLogger -> UDOO'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '52321'
+	option dest_ip '10.1.0.47'
+	option dest_port '52321'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'FHEM -> UDOO'
 	option src 'wan'
 	option dest 'lan'
 	option proto 'tcp'
@@ -132,7 +88,51 @@ config redirect
 
 
 config redirect
-	option name 'SIP to fb7490'
+	option name 'SSH   -> GOFLEX'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '17842'
+	option dest_ip '10.1.0.42'
+	option dest_port '22'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SSH   -> owl (via SMTP port 587)'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '587'
+	option dest_ip '10.1.1.1'
+	option dest_port '22 '
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SSH   -> owl'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '17832'
+	option dest_ip '10.1.1.1'
+	option dest_port '22'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SSH   -> Shark'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '22101'
+	option dest_ip '10.1.0.1'
+	option dest_port '22'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'SIP   -> fb7490'
 	option src 'wan'
 	option dest 'lan'
 	option proto 'udp'
