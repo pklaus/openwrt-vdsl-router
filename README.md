@@ -17,3 +17,8 @@ set to MPoA mode.
 Another procedure I followed was the regdomain fix shown here:
 <http://luci.subsignal.org/~jow/reghack/README.txt>
 
+#### USB Storage
+
+The partition `/dev/sda1` of your first connected USB thumb drive
+will be mounted with vfat file system to `/mnt/external`.
+Please create /mnt/external manually before deploying.

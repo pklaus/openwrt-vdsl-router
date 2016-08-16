@@ -8,5 +8,17 @@ htop
 # (network traffic debugging)
 tcpdump
 
+# USB Storage
+# https://wiki.openwrt.org/doc/howto/usb.storage
+kmod-usb-storage
+block-mount
+block-hotplug
+# (ext4 support)
+kmod-fs-ext4
+# (FAT32 support incl codepages below)
+kmod-fs-vfat
+kmod-nls-cp437
+kmod-nls-iso8859-1
+
 # iproute2 tools:
 ip

@@ -1,0 +1,7 @@
+config mount
+	option target   /mnt/external
+	option device   /dev/sda1
+	option fstype   vfat
+	option options  rw,sync
+	option enabled  1
+	option enabled_fsck 1
