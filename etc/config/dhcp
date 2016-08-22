@@ -91,6 +91,13 @@ config host
 
 
 config host
+	option name 'gogs'
+	option mac '00:0c:29:e8:41:d5'
+	option ip '10.1.0.45'
+	option hostid '::10:45'
+
+
+config host
 	option name 'udoo'
 	option mac '00:c0:08:88:22:0f'
 	option ip '10.1.0.47'

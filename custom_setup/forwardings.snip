@@ -152,3 +152,14 @@ config redirect
 	option dest_port '5060'
 	option target 'DNAT'
 
+
+config redirect
+	option name 'SSH   -> gogs'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '22'
+	option dest_ip '10.1.0.45'
+	option dest_port '22 '
+	option target 'DNAT'
+
