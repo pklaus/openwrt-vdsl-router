@@ -312,7 +312,7 @@ config redirect
 	option proto 'tcp'
 	option src_dport '587'
 	option dest_ip '10.1.1.1'
-	option dest_port '22 '
+	option dest_port '22'
 	option target 'DNAT'
 
 
@@ -356,6 +356,6 @@ config redirect
 	option proto 'tcp'
 	option src_dport '22'
 	option dest_ip '10.1.0.45'
-	option dest_port '22 '
+	option dest_port '22'
 	option target 'DNAT'
 
