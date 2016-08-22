@@ -35,10 +35,13 @@ UDP	5060	10.1.0.223:5060	SIP   -> fb7490
 TCP	22	10.1.0.45:22	SSH   -> gogs
 """
 
-data = data.strip()
-
-for line in data.split('\n'):
-    proto, src_dport, dest, name = line.split('\t')
-    dest_ip, dest_port = dest.split(':')
-    print(template.format(name=name, proto=proto.lower(), src_dport=src_dport, dest_ip=dest_ip, dest_port=dest_port))
-
+for line in data.strip().split('\n'):
+    try:
+        proto, src_dport, dest, name = (substr.strip() for substr in line.split('\t'))
+        dest_ip, dest_port = dest.split(':')
+        print(template.format(name=name, proto=proto.lower(), src_dport=src_dport, dest_ip=dest_ip, dest_port=dest_port))
+    except Exception as e:
+        import logging
+        logging.warning('Problem with the following line:')
+        logging.warning(line)
+        logging.warning(e)
