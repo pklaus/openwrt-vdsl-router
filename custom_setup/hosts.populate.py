@@ -27,6 +27,7 @@ ac:18:26:75:8e:5f	10.1.0.54	xp810
 28:37:37:47:7d:6e	10.1.0.71	airport-express
 0c:47:c9:26:b0:64	10.1.0.72	firetv
 a4:77:33:a3:d5:ba	10.1.0.73	chromecast
+b8:27:eb:a2:67:6d	10.1.0.74	slice
 9c:c7:a6:be:cf:29	10.1.0.223	fb7490
 00:1c:4a:1c:ff:73	10.1.0.224	fb7270
 4c:e6:76:4f:61:b2	10.1.0.225	cluster-router
