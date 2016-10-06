@@ -36,6 +36,7 @@ TCP	22	10.1.0.45:22	SSH   -> gogs
 """
 
 for line in data.strip().split('\n'):
+    if line.strip().startswith('#'): continue
     try:
         proto, src_dport, dest, name = (substr.strip() for substr in line.split('\t'))
         dest_ip, dest_port = dest.split(':')
