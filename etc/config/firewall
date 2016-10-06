@@ -284,17 +284,6 @@ config redirect
 
 
 config redirect
-	option name 'FHEM -> UDOO'
-	option src 'wan'
-	option dest 'lan'
-	option proto 'tcp'
-	option src_dport '27166-27168'
-	option dest_ip '10.1.0.47'
-	option dest_port '8083-8085'
-	option target 'DNAT'
-
-
-config redirect
 	option name 'SSH   -> GOFLEX'
 	option src 'wan'
 	option dest 'lan'
