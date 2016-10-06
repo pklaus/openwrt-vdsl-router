@@ -39,11 +39,12 @@ e0:f8:47:30:be:ca	10.1.1.7	dm-wifi
 40:0e:85:2a:6d:11	10.1.2.2	s4active-doro
 cc:78:5f:e9:52:ea	10.1.2.21	ipad-philipp
 bc:92:6b:6e:60:94	10.1.2.22	ipad-doro
-0c:47:c9:26:b0:64	10.1.2.31	kindle-doro
+0c:47:c9:26:b0:64	10.1.2.31	firetv
 00:90:a2:3a:af:ec	10.1.2.32	sony-prst1-philipp
 b8:27:eb:94:4a:06	10.1.3.11	ut61epi
 00:30:f1:ed:f9:43	10.1.3.12	surveillancepi
 b8:27:eb:f5:c3:f9	10.1.3.13	spypi
+18:fe:34:d2:71:f5	10.1.3.14	nodemcu_01
 """
 
 hosts = hosts.strip()
