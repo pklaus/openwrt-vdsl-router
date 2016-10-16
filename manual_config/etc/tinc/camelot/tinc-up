@@ -1,5 +1,6 @@
 #!/bin/sh
 
+ubus -t 15 wait_for network.interface.$INTERFACE
 ip addr add 10.1.11.2 dev $INTERFACE
 ip link set dev $INTERFACE up
 ip route add 192.168.1.0/24 dev $INTERFACE

@@ -73,6 +73,11 @@
              ]
         },
         {
+            "network": "camelot",
+            "name": "camelot",
+            "type": "ethernet"
+        },
+        {
             "name": "wlan0",
             "type": "wireless",
             "network": "lan",

@@ -195,6 +195,25 @@ config rule
 #	option dest_port	120
 #	option proto	tcp
 
+
+### TINC VPN
+
+config zone
+	option name    'vpn'
+	option input   'ACCEPT'
+	option forward 'ACCEPT'
+	option output  'ACCEPT'
+	option network 'camelot'
+
+config forwarding
+	option dest 'lan'
+	option src 'vpn'
+
+config forwarding
+	option dest 'vpn'
+	option src 'lan'
+
+
 config redirect
 	option name 'HTTP  -> UDOO nginx (Blog, URL Shortener)'
 	option src 'wan'

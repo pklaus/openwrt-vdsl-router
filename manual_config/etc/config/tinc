@@ -1,12 +1,12 @@
 config tinc-net kgs
 	option enabled 1
-	option log /var/log/tinc.kgs.log
-	option debug 2
+	option log /tmp/log/tinc.kgs.log
+	option debug 3
 
 config tinc-net camelot
 	option enabled 1
-	option log /var/log/tinc.camelot.log
-	option debug 2
+	option log /tmp/log/tinc.camelot.log
+	option debug 3
 
 config tinc-net NETNAME
 	option enabled 0

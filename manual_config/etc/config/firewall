@@ -194,3 +194,22 @@ config rule
 #	option dest_ip	194.25.2.129
 #	option dest_port	120
 #	option proto	tcp
+
+
+### TINC VPN
+
+config zone
+	option name    'vpn'
+	option input   'ACCEPT'
+	option forward 'ACCEPT'
+	option output  'ACCEPT'
+	option network 'camelot'
+
+config forwarding
+	option dest 'lan'
+	option src 'vpn'
+
+config forwarding
+	option dest 'vpn'
+	option src 'lan'
+

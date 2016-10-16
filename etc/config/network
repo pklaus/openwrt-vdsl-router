@@ -41,6 +41,10 @@ config interface 'modem_access'
 	option ipaddr '192.168.107.2/24'
 	option proto 'static'
 
+config interface 'camelot'
+	option ifname 'camelot'
+	option proto 'none'
+
 
 
 
