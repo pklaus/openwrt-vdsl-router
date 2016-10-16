@@ -22,3 +22,6 @@ kmod-nls-iso8859-1
 
 # iproute2 tools:
 ip
+
+# For a nice VPN functionality
+tinc

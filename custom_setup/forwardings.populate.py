@@ -5,6 +5,8 @@ For IPv6 check:
 https://wiki.openwrt.org/doc/uci/firewall#port_accept_for_ipv6
 """
 
+### Forwarding
+
 template = """
 config redirect
 	option name '{name}'
@@ -41,6 +43,33 @@ for line in data.strip().split('\n'):
         proto, src_dport, dest, name = (substr.strip() for substr in line.split('\t'))
         dest_ip, dest_port = dest.split(':')
         print(template.format(name=name, proto=proto.lower(), src_dport=src_dport, dest_ip=dest_ip, dest_port=dest_port))
+    except Exception as e:
+        import logging
+        logging.warning('Problem with the following line:')
+        logging.warning(line)
+        logging.warning(e)
+
+### Input
+
+template = """
+config rule
+	option name '{name}'
+	option src 'wan'
+	option proto '{proto}'
+	option dest_port '{dest_port}'
+	option target 'ACCEPT'
+"""
+
+data = """
+TCP UDP	655	tincd kgs
+TCP UDP	49967	tincd camelot
+"""
+
+for line in data.strip().split('\n'):
+    if line.strip().startswith('#'): continue
+    try:
+        proto, dest_port, name = (substr.strip() for substr in line.split('\t'))
+        print(template.format(name=name, proto=proto.lower(), dest_port=dest_port))
     except Exception as e:
         import logging
         logging.warning('Problem with the following line:')

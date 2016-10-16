@@ -348,3 +348,19 @@ config redirect
 	option dest_port '22'
 	option target 'DNAT'
 
+
+config rule
+	option name 'tincd kgs'
+	option src 'wan'
+	option proto 'tcp udp'
+	option dest_port '655'
+	option target 'ACCEPT'
+
+
+config rule
+	option name 'tincd camelot'
+	option src 'wan'
+	option proto 'tcp udp'
+	option dest_port '49967'
+	option target 'ACCEPT'
+
