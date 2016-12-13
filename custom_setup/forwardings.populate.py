@@ -20,6 +20,7 @@ config redirect
 """
 
 data = """
+# Proto	Port	Destination	Name
 TCP	80	10.1.0.47:80	HTTP  -> UDOO nginx (Blog, URL Shortener)
 TCP	443	10.1.0.47:443	HTTPS -> UDOO nginx (Gogs)
 TCP	17847	10.1.0.47:22	SSH   -> UDOO
@@ -61,6 +62,7 @@ config rule
 """
 
 data = """
+# Proto	Port	Name
 TCP UDP	655	tincd kgs
 TCP UDP	49967	tincd camelot
 """
