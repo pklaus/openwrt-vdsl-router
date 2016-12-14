@@ -36,6 +36,7 @@ TCP	17832	10.1.1.1:22	SSH   -> owl
 TCP	22101	10.1.0.1:22	SSH   -> Shark
 UDP	5060	10.1.0.223:5060	SIP   -> fb7490
 TCP	22	10.1.0.45:22	SSH   -> gogs
+TCP	22000	10.1.0.46:22000	Syncthing
 """
 
 for line in data.strip().split('\n'):

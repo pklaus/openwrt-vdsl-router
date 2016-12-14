@@ -368,6 +368,17 @@ config redirect
 	option target 'DNAT'
 
 
+config redirect
+	option name 'Syncthing'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp'
+	option src_dport '22000'
+	option dest_ip '10.1.0.46'
+	option dest_port '22000'
+	option target 'DNAT'
+
+
 config rule
 	option name 'tincd kgs'
 	option src 'wan'
