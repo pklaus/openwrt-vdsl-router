@@ -17,6 +17,18 @@ set to MPoA mode.
 Another procedure I followed was the regdomain fix shown here:
 <http://luci.subsignal.org/~jow/reghack/README.txt>
 
+#### VPN via tinc
+
+* <https://tinc-vpn.org>
+* <https://wiki.openwrt.org/doc/howto/vpn.tinc>
+* <https://wiki.freifunk.net/Tinc>
+* <http://vardump.org/wiki.php/WZR-HP-G300NH-tinc>
+* <http://blog.philippklaus.de/2012/01/vpn-with-tinc-and-ipv6-using-openwrt-routers/>
+
+First time procedure:
+
+    /etc/init.d/tinc enable
+
 #### USB Storage
 
 The partition `/dev/sda1` of your first connected USB thumb drive
