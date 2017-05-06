@@ -25,3 +25,9 @@ ip
 
 # For a nice VPN functionality
 tinc
+
+# traffic monitoring w/ vnstat
+# https://wiki.openwrt.org/doc/howto/vnstat
+vnstat
+vnstati
+luci-app-vnstat
