@@ -8,8 +8,7 @@
 #------
 
 
-#backup-etc-dirs.py -f ./backups/ vdsl-router
 
-# or more explicitly
-
-backup-etc-dirs.py -f ./backups/ 10.1.0.1
+#backup-etc-dirs.py -f ./backups/ shark
+### or remotely ###
+backup-etc-dirs.py -f ./backups/ -a /mnt/external/vnstat shark-kgs
