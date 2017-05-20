@@ -254,17 +254,45 @@ config host
 
 
 config host
-	option name 'ipad-philipp'
+	option name 'lenovo-p2-phil'
+	option mac 'CC:61:E5:14:E9:B6'
+	option ip '10.1.2.3'
+	option hostid '::12:3'
+
+
+config host
+	option name 'lenovo-p2-doro'
+	option mac 'CC:61:E5:14:CE:5B'
+	option ip '10.1.2.4'
+	option hostid '::12:4'
+
+
+config host
+	option name 'tablet-ipad-philipp'
 	option mac 'cc:78:5f:e9:52:ea'
 	option ip '10.1.2.21'
 	option hostid '::12:21'
 
 
 config host
-	option name 'ipad-doro'
+	option name 'tablet-ipad-doro'
 	option mac 'bc:92:6b:6e:60:94'
 	option ip '10.1.2.22'
 	option hostid '::12:22'
+
+
+config host
+	option name 'tablet-galaxy-tab3-7-lite'
+	option mac '08:3D:88:9D:31:05'
+	option ip '10.1.2.23'
+	option hostid '::12:23'
+
+
+config host
+	option name 'tablet-huawei-m2'
+	option mac '50:01:D9:D8:05:48'
+	option ip '10.1.2.24'
+	option hostid '::12:24'
 
 
 config host

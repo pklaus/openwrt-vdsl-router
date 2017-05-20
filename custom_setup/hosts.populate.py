@@ -41,8 +41,12 @@ f8:b1:56:b3:2a:79	10.1.1.5	gnu
 e0:f8:47:30:be:ca	10.1.1.7	dm-wifi
 40:0e:85:83:5f:a4	10.1.2.1	s4active-philipp
 40:0e:85:2a:6d:11	10.1.2.2	s4active-doro
-cc:78:5f:e9:52:ea	10.1.2.21	ipad-philipp
-bc:92:6b:6e:60:94	10.1.2.22	ipad-doro
+CC:61:E5:14:E9:B6	10.1.2.3	lenovo-p2-phil
+CC:61:E5:14:CE:5B	10.1.2.4	lenovo-p2-doro
+cc:78:5f:e9:52:ea	10.1.2.21	tablet-ipad-philipp
+bc:92:6b:6e:60:94	10.1.2.22	tablet-ipad-doro
+08:3D:88:9D:31:05	10.1.2.23	tablet-galaxy-tab3-7-lite
+50:01:D9:D8:05:48	10.1.2.24	tablet-huawei-m2
 00:90:a2:3a:af:ec	10.1.2.32	sony-prst1-philipp
 b8:27:eb:94:4a:06	10.1.3.11	ut61epi
 00:30:f1:ed:f9:43	10.1.3.12	surveillancepi
