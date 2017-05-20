@@ -1,5 +1,4 @@
 # HTTPS support:
-uhttpd-mod-tls
 luci-ssl
 
 # Regularly needed packages:
@@ -11,8 +10,6 @@ tcpdump
 # USB Storage
 # https://wiki.openwrt.org/doc/howto/usb.storage
 kmod-usb-storage
-block-mount
-block-hotplug
 # (ext4 support)
 kmod-fs-ext4
 # (FAT32 support incl codepages below)
