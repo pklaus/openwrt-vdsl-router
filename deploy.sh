@@ -14,20 +14,20 @@ PACKAGE_FILE=custom_setup/additional_packages.lst
 
 REQUIREMENTS=$(cat $PACKAGE_FILE | grep -v '^#')
 
-ssh root@$HOST "opkg update"
-for req in $REQUIREMENTS; do
-    echo "Requirement: $req"
-    ssh root@$HOST "opkg install $req"
-done
+#ssh root@$HOST "opkg update"
+#for req in $REQUIREMENTS; do
+#    echo "Requirement: $req"
+#    ssh root@$HOST "opkg install $req"
+#done
 
 echo "Deploying all files to /etc"
 scp -r ./etc/* "root@[$HOST]:/etc/"
 
 # restart firewall (forwardings) and dnsmasq (dhcp)
-#ssh root@$HOST '/etc/init.d/firewall restart'
-#ssh root@$HOST '/etc/init.d/dnsmasq  restart'
-#ssh root@$HOST '/etc/init.d/tinc restart'
+ssh root@$HOST '/etc/init.d/firewall restart'
+ssh root@$HOST '/etc/init.d/dnsmasq  restart'
+ssh root@$HOST '/etc/init.d/tinc restart'
 
 #echo "Rebooting the router"
-ssh root@$HOST 'reboot'
+#ssh root@$HOST 'reboot'
 
