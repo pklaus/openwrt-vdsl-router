@@ -1,5 +1,5 @@
 config wifi-device 'radio0'
-	option channel '140'
+	option channel '48'
 	option country 'DE'
 	option distance '25'
 	option htmode 'HT40'
