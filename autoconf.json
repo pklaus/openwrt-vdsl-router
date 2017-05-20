@@ -84,7 +84,7 @@
             "wireless": {
                 "radio": "radio0",
                 "mode": "access_point",
-                "ssid": "Shark",
+                "ssid": "Shark_5GHz",
                 "encryption": {
                     "protocol": "wpa2_personal",
                     "key": "fWUb30uzee"

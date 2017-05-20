@@ -25,7 +25,7 @@ config wifi-iface 'wifi_wlan0'
 	option key 'fWUb30uzee'
 	option mode 'ap'
 	option network 'lan'
-	option ssid 'Shark'
+	option ssid 'Shark_5GHz'
 
 config wifi-iface 'wifi_wlan1'
 	option device 'radio1'
