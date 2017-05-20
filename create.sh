@@ -2,7 +2,7 @@
 
 NETJSON_CONFIG=./autoconf.json
 
-source ~/.pyvenv/playground-3.5/bin/activate
+source ~/.pyvenv/playground-3.6/bin/activate
 
 echo "Testing the netjson configuration file $NETJSON_CONFIG"
 ./test_config.py $NETJSON_CONFIG | less
