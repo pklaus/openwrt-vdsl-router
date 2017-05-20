@@ -2,7 +2,8 @@
 
 # ---- Start config section
 
-HOST=shark
+HOST=192.168.1.1
+#HOST=shark
 #HOST=shark-kgs
 #HOST=10.1.0.1
 #HOST="2003:1234:5678:9abc::1"
@@ -23,10 +24,10 @@ echo "Deploying all files to /etc"
 scp -r ./etc/* "root@[$HOST]:/etc/"
 
 # restart firewall (forwardings) and dnsmasq (dhcp)
-ssh root@$HOST '/etc/init.d/firewall restart'
-ssh root@$HOST '/etc/init.d/dnsmasq  restart'
-ssh root@$HOST '/etc/init.d/tinc restart'
+#ssh root@$HOST '/etc/init.d/firewall restart'
+#ssh root@$HOST '/etc/init.d/dnsmasq  restart'
+#ssh root@$HOST '/etc/init.d/tinc restart'
 
 #echo "Rebooting the router"
-#ssh root@$HOST 'reboot'
+ssh root@$HOST 'reboot'
 

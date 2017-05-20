@@ -25,3 +25,8 @@ config internal 'ccache'
 config internal 'themes'
 	option Bootstrap '/luci-static/bootstrap'
 
+config internal 'diag'
+	option dns 'lede-project.org'
+	option ping 'lede-project.org'
+	option route 'lede-project.org'
+

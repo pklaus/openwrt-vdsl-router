@@ -4,6 +4,9 @@
         "timezone": "Europe/Berlin",
         "zonename": "Europe/Berlin",
         "ula_prefix": "fda0:1a7c:fa2f::/48",
+	"ttylogin": false,
+	"log_size": 64,
+	"urandom_seed": 0,
         "log_ip": "10.1.0.42",
         "conloglevel": "5",
         "cronloglevel": "8"
@@ -42,6 +45,7 @@
         {
             "network": "wan",
             "name": "eth0.7",
+            "mac": "f8:1a:67:a5:f1:e1",
             "type": "other",
             "proto": "pppoe",
             "username": "0029225145825510025554560001@t-online.de",
@@ -167,10 +171,10 @@
         "enabled": true,
         "enable_server": true,
         "server": [
-            "0.openwrt.pool.ntp.org",
-            "1.openwrt.pool.ntp.org",
-            "2.openwrt.pool.ntp.org",
-            "3.openwrt.pool.ntp.org"
+            "0.lede.pool.ntp.org",
+            "1.lede.pool.ntp.org",
+            "2.lede.pool.ntp.org",
+            "3.lede.pool.ntp.org"
         ]
     },
     "dropbear": [
