@@ -39,6 +39,7 @@ f8:d1:11:a0:05:44	10.1.0.226	fusebox-router
 e0:f8:47:41:d6:c2	10.1.1.3	elk-wifi
 f8:b1:56:b3:2a:79	10.1.1.5	gnu
 e0:f8:47:30:be:ca	10.1.1.7	dm-wifi
+cc:61:e5:14:e9:b6	10.1.1.9	doro-db-laptop	# DEFRALT857464
 40:0e:85:83:5f:a4	10.1.2.1	s4active-philipp
 40:0e:85:2a:6d:11	10.1.2.2	s4active-doro
 CC:61:E5:14:E9:B6	10.1.2.3	lenovo-p2-phil
@@ -48,6 +49,7 @@ bc:92:6b:6e:60:94	10.1.2.22	tablet-ipad-doro
 08:3D:88:9D:31:05	10.1.2.23	tablet-galaxy-tab3-7-lite
 50:01:D9:D8:05:48	10.1.2.24	tablet-huawei-m2
 00:90:a2:3a:af:ec	10.1.2.32	sony-prst1-philipp
+44:65:0d:8a:ac:6f	10.1.2.33	kindle-voyage-doro
 b8:27:eb:94:4a:06	10.1.3.11	ut61epi
 00:30:f1:ed:f9:43	10.1.3.12	surveillancepi
 b8:27:eb:f5:c3:f9	10.1.3.13	spypi
