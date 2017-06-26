@@ -65,7 +65,7 @@ For the vnstat system I use, I first had to initialize the db once:
 
 Set up cronjob:
 
-    echo "*/5 * * * * vnstat -u" >> /etc/crontabs/root
+    echo "*/5 * * * * /usr/bin/vnstat -u" >> /etc/crontabs/root
     /etc/init.d/cron restart
 
 Or rather no, we don't want cron to run the manual `vnstat -u` command,
