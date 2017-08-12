@@ -9,6 +9,8 @@ config host
 """
 
 hosts = """
+18:66:da:0c:00:b3	10.1.0.10	eel
+24:05:0f:34:4a:4d	10.1.0.12	eel-wifi
 34:17:eb:c4:5d:73	10.1.0.18	esxi
 b0:48:7a:b3:31:93	10.1.0.34	schaltbox
 f8:1a:67:4c:f8:6a	10.1.0.35	waltbox
@@ -54,6 +56,8 @@ b8:27:eb:94:4a:06	10.1.3.11	ut61epi
 00:30:f1:ed:f9:43	10.1.3.12	surveillancepi
 b8:27:eb:f5:c3:f9	10.1.3.13	spypi
 18:fe:34:d2:71:f5	10.1.3.14	nodemcu_01
+94:9f:3e:87:52:be	10.1.4.1	sonos-wz
+94:9f:3e:87:18:38	10.1.4.2	sonos-ku
 """
 
 hosts = hosts.strip()
