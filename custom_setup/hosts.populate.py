@@ -39,6 +39,7 @@ f8:d1:11:a0:05:44	10.1.0.226	fusebox-router
 #68:05:ca:2f:4e:8d	10.1.1.2	owl-addon
 00:1b:21:38:45:88	10.1.1.2	owl-addon	# Intel Dual ET / First port (WOL capable)
 e0:f8:47:41:d6:c2	10.1.1.3	elk-wifi
+c8:2a:14:07:5e:f7	10.1.1.4	elk-wired
 f8:b1:56:b3:2a:79	10.1.1.5	gnu
 e0:f8:47:30:be:ca	10.1.1.7	dm-wifi
 cc:61:e5:14:e9:b6	10.1.1.9	doro-db-laptop	# DEFRALT857464
