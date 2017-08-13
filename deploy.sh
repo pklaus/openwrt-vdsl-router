@@ -42,9 +42,9 @@ ssh root@$HOST '/etc/init.d/cron restart'
 ssh root@$HOST '/etc/init.d/firewall restart'
 ssh root@$HOST '/etc/init.d/dnsmasq  restart'
 # restart the VPN daemon tinc
-ssh root@$HOST '/etc/init.d/tinc restart'
+#ssh root@$HOST '/etc/init.d/tinc restart'
 # restart WiFi
-ssh root@$HOST 'wifi'
+#ssh root@$HOST 'wifi'
 
 #echo "Rebooting the router"
 #ssh root@$HOST 'reboot'
