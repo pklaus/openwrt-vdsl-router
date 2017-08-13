@@ -23,6 +23,19 @@ REQUIREMENTS=$(cat $PACKAGE_FILE | grep -v '^#')
 echo "Deploying all files to /etc"
 scp -r ./etc/* "root@[$HOST]:/etc/"
 
+# Mount entries defined in /etc/config/fstab (eg. /mnt/external)
+#ssh root@$HOST 'mkdir /mnt/external'
+#ssh root@$HOST 'service fstab enable'
+#ssh root@$HOST '/sbin/block mount'
+
+# Setup vnstat DBs:
+#ssh root@$HOST 'vnstat -u -i br-lan'
+#ssh root@$HOST 'vnstat -u -i pppoe-wan'
+#ssh root@$HOST 'vnstat -u -i eth0.7'
+#ssh root@$HOST 'touch /etc/config/vnstat'
+#ssh root@$HOST '/etc/init.d/vnstat enable'
+#ssh root@$HOST '/etc/init.d/vnstat start'
+
 # restart firewall (forwardings) and dnsmasq (dhcp)
 ssh root@$HOST '/etc/init.d/firewall restart'
 ssh root@$HOST '/etc/init.d/dnsmasq  restart'

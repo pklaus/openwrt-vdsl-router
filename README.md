@@ -37,55 +37,6 @@ Please create /mnt/external manually before deploying.
 
 #### vnstat
 
-opkg install vnstat vnstati luci-app-vnstat
-
-In `/etc/vnstat.conf` replace:
-
-    DatabaseDir "/var/lib/vnstat"
-    # with
-    DatabaseDir "/mnt/external/vnstat"
-    # and
-    SaveInterval 30
-    # with
-    SaveInterval 15
-    # and
-    Interface "eth0"
-    # with
-    Interface "pppoe-wan"
-
-Could be done with inline change with sed:
-
-    sed -i 's/OLD_VERSION/NEW_VERSION/g' /etc/vnstat.conf
-
-For the vnstat system I use, I first had to initialize the db once:
-
-    vnstat -u -i br-lan
-    vnstat -u -i pppoe-wan
-    vnstat -u -i eth0.7
-
-Set up cronjob:
-
-    echo "*/5 * * * * /usr/bin/vnstat -u" >> /etc/crontabs/root
-    /etc/init.d/cron restart
-
-Or rather no, we don't want cron to run the manual `vnstat -u` command,
-we want vnstatd to update the database (and respect our SaveInterval to write
-to USB flash):
-
-    rm /etc/crontabs/root
-    rm /etc/config/vnstat
-    touch /etc/config/vnstat
-    /etc/init.d/vnstat enable
-    /etc/init.d/vnstat start
-    /etc/init.d/cron restart
-
-Add
-
-    #/etc/crontabs/root # nope, not anymore, see above
-    /etc/vnstat.conf
-
-to `/etc/sysupgrade.conf`
-
 Check stats on the terminal with `vnstat --months` or
 on the luci web interface at: *Status* → *VnStat Traffic Monitor*.
 
