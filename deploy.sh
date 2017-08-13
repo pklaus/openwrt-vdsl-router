@@ -20,7 +20,7 @@ REQUIREMENTS=$(cat $PACKAGE_FILE | grep -v '^#')
 #    ssh root@$HOST "opkg install $req"
 #done
 
-echo "Deploying all files to /etc"
+# Deploying all configuration files to /etc
 scp -r ./etc/* "root@[$HOST]:/etc/"
 
 # Mount entries defined in /etc/config/fstab (eg. /mnt/external)
@@ -36,10 +36,15 @@ scp -r ./etc/* "root@[$HOST]:/etc/"
 #ssh root@$HOST '/etc/init.d/vnstat enable'
 #ssh root@$HOST '/etc/init.d/vnstat start'
 
-# restart firewall (forwardings) and dnsmasq (dhcp)
+# restart cron daemon
+ssh root@$HOST '/etc/init.d/cron restart'
+# restart firewall (forwardings) and dnsmasq (hosts, dhcp)
 ssh root@$HOST '/etc/init.d/firewall restart'
 ssh root@$HOST '/etc/init.d/dnsmasq  restart'
+# restart the VPN daemon tinc
 ssh root@$HOST '/etc/init.d/tinc restart'
+# restart WiFi
+ssh root@$HOST 'wifi'
 
 #echo "Rebooting the router"
 #ssh root@$HOST 'reboot'
