@@ -43,3 +43,15 @@ on the luci web interface at: *Status* → *VnStat Traffic Monitor*.
 See:
 * <https://gist.github.com/ruzickap/10016376>
 * <https://wiki.openwrt.org/doc/howto/vnstat>
+
+#### Sysupgrade
+
+Upgrade the system by flashing a new sysupgrade image (via the web interface). Deselect keep settings.
+After upgrading, create a backup of the fresh configuration and put it into <https://bitbucket.org/pklaus/openwrt-configurations/branches/>
+Then, deploy the proper configuration:
+* Deploy configuration files
+* Reboot (to get PPPoE connection)
+* Deploy again, this time installing the packages with opkg.
+* Reboot again.
+* Deploy again, this time configuring fstab, vnstat and the likes
+* Reboot again.
