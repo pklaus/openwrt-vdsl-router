@@ -3,6 +3,7 @@
 NETJSON_CONFIG=./autoconf.json
 
 source ~/.pyvenv/playground-3.6/bin/activate
+pip install --upgrade -r requirements.txt
 
 echo "Testing the netjson configuration file $NETJSON_CONFIG"
 ./test_config.py $NETJSON_CONFIG | less
