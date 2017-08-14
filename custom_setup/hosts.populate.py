@@ -60,6 +60,7 @@ b8:27:eb:f5:c3:f9	10.1.3.13	spypi
 94:9f:3e:87:52:be	10.1.4.1	sonos-wz
 94:9f:3e:87:18:38	10.1.4.2	sonos-ku
 a0:cc:2b:f5:b8:31	10.1.4.50	tradfri-gw
+00:19:af:34:7d:48	10.1.5.1	ds1054z
 """
 
 hosts = hosts.strip()
