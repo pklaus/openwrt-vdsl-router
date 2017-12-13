@@ -143,6 +143,28 @@ config redirect
 
 
 config redirect
+	option name 'VoIP voice (RTP) -> fb7490'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'udp'
+	option src_dport '5070-5079'
+	option dest_ip '10.1.0.223'
+	option dest_port '5070-5079'
+	option target 'DNAT'
+
+
+config redirect
+	option name 'VoIP fax         -> fb7490'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'udp'
+	option src_dport '30000-30019'
+	option dest_ip '10.1.0.223'
+	option dest_port '30000-30019'
+	option target 'DNAT'
+
+
+config redirect
 	option name 'SSH   -> gogs'
 	option src 'wan'
 	option dest 'lan'
