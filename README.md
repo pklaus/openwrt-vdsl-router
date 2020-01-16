@@ -58,3 +58,18 @@ Then, deploy the proper configuration:
 * Reboot again.
 * Deploy again, this time configuring fstab, vnstat and the likes
 * Reboot again.
+
+#### VLAN -> DMZ
+
+*Only planned, not implemented so far!!!*
+
+in DMZ 1 (VLAN 111):
+
+* Nginx reverse proxy server with own websites
+
+in DMZ 2 (VLAN 222):
+
+* FHEM
+* fusebox router
+* WiFi AP for FHEM/fusebox/mqtt clients
+
