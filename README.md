@@ -37,6 +37,9 @@ Please create /mnt/external manually before deploying.
 
 #### vnstat
 
+vnstat is configured to store its database in the USB stick mounted
+to /mnt/external/.
+
 Check stats on the terminal with `vnstat --months` or
 on the luci web interface at: *Status* → *VnStat Traffic Monitor*.
 
