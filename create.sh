@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Fail if any command fails
+set -e
+
 NETJSON_CONFIG=./autoconf.json
 
 echo "Testing the netjson configuration file $NETJSON_CONFIG"
