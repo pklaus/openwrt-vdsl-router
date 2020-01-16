@@ -73,3 +73,45 @@ in DMZ 2 (VLAN 222):
 * fusebox router
 * WiFi AP for FHEM/fusebox/mqtt clients
 
+
+### TODO
+
+* Not needed, also works via ICMP Redirects (on by default). Otherwise:
+  Automatically add static routes to the ones pushed with DHCP:
+  `dhcp-option=121,192.168.1.0/24,1.2.3.4,10.0.0.0/8,5.6.7.8`
+  See https://forum.openwrt.org/viewtopic.php?id=38308
+* <https://wiki.openwrt.org/doc/howto/bwmon>
+
+#### IPv6
+
+<http://www.heise.de/netze/artikel/OpenWRT-wuerfelt-IPv6-Praefixe-1445607.html?artikelseite=2>
+
+radvd is not used anymore:
+<https://wiki.openwrt.org/doc/uci/radvd>
+
+Instead, odhcpd is doing the job?
+<https://wiki.openwrt.org/doc/techref/odhcpd>
+<https://github.com/sbyx/odhcpd>
+-> Indeed, `ps w | grep odhcpd` shows the daemon to be running.
+
+On the upstream IPv6 interface, you can set the `ifaceid` option
+to override the interface identifier for adresses received via RA
+when using the protocol `dhcpv6`.
+
+Use the `ip6prefix` option on wan6:
+An (additional) user-provided IPv6 prefix for distribution to clients.
+
+Check `logread | grep odhcpd` and `/tmp/hosts/odhcpd` for debugging
+info if you want to see what odhcpd is up to.
+
+#### Hosts
+
+Setup CNAME for owl -> owl-amt
+
+Add option `hostid` to each host definition specifying the IPv6 suffix (like `::252:122`)!!!!
+
+#### Fix VoIP
+
+* <https://github.com/katallaxie/openwrt-wdr4300/tree/master/etc/asterisk>
+* <https://wiki.openwrt.org/doc/howto/stun>
+
