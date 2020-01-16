@@ -11,7 +11,7 @@ def main():
     with open(args.configfile, 'r') as f:
         config = json.load(f)
     conf = netjsonconfig.OpenWrt(config, templates=[], context={})
-    #conf.generate()
+    conf.generate()
     content = conf.render()
 
     print(content)
