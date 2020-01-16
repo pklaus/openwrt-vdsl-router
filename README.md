@@ -4,6 +4,34 @@ This repository contains my very personal DSL router configuration based
 on OpenWrt on a TP-Link TL-WDR4900 and the VDSL modem DrayTek Vigor 130
 set to MPoA mode.
 
+### Prerequisites
+
+You need to have Python running and install the requirements:
+
+    pip install --upgrade -r requirements.txt
+
+### Usage
+
+The main tools to use this configuration / code are:
+
+    ./create.sh
+
+and
+
+    ./deploy.sh
+
+The create.sh script populates the etc folder with the configuration
+files to be uploaded to /etc on the OpenWrt router. The relevant source
+files it's using for this task are mostly:
+
+* `autoconf.json`
+* `manual_config/*`
+* `custom_setup/*`
+
+The deploy script can then be called to push the configuration on the router.
+It's also used (with some lines uncommented) for initial setup after upgrading
+the router's firmware: installing packages, setting up mounts, ...
+
 #### PPPoE / VDSL
 
 * [Network Setup w/ PPPoE](https://wiki.openwrt.org/doc/uci/network#protocol_pppoe_ppp_over_ethernet)
