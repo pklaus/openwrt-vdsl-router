@@ -28,3 +28,7 @@ tinc
 vnstat
 vnstati
 luci-app-vnstat
+
+# nmap - if you need to scan your network
+# it's kind of big though! ~1.7 MB installed size
+nmap
